@@ -16,7 +16,7 @@ HOW TO BUILD FROM SOURCE TARBALL
    make
    make check     # to be sure it's working
    make install
-   
+
 And for the secure (un-swappable) memory allocation to work, pwsafe must be
 install suid root
 
@@ -43,7 +43,15 @@ HOW TO BUILD FROM GITHUB
 You'll need autoconf 2.5 or better, and automake. On debian this should
 get you most of the way there:
 
-   apt-get install automake autoconf gcc 
+   apt-get install automake autoconf gcc
+
+
+BUILDING WITHOUT X11 SUPPORT
+
+If you do not want to have support for X you can run configure with
+the following option
+
+   ./configure --with-x=no # Disable support for X11
 
 
 SUPPORTED ENVIRONMENTS
@@ -79,7 +87,9 @@ before ./configuring. Tiger (and presumably beyond) require "-undefined suppress
 when "-flat_namespace" is used, but autoconf does not know this so you have to
 add it manually.
 
+pwsafe built on Cygwin 2.10.0(0.325/5/3).
 
+The build was done without X11 support.
 
 	- Nicolas S. Dade <ndade@nsd.dyndns.org>
-
+	- Santhosh Raju <fraggerfox> (Cygwin notes)
